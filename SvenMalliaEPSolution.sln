@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "SvenMalliaEPSolution\Presentation.csproj", "{02B7EC7C-8080-4EF7-93F5-98D34B8E7AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{4E6CDED9-0845-4744-8B93-0B0C246AA571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{99ABE02E-E8C9-4280-BC81-576FB18AD362}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02B7EC7C-8080-4EF7-93F5-98D34B8E7AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B7EC7C-8080-4EF7-93F5-98D34B8E7AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B7EC7C-8080-4EF7-93F5-98D34B8E7AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B7EC7C-8080-4EF7-93F5-98D34B8E7AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6CDED9-0845-4744-8B93-0B0C246AA571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6CDED9-0845-4744-8B93-0B0C246AA571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6CDED9-0845-4744-8B93-0B0C246AA571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6CDED9-0845-4744-8B93-0B0C246AA571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99ABE02E-E8C9-4280-BC81-576FB18AD362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99ABE02E-E8C9-4280-BC81-576FB18AD362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99ABE02E-E8C9-4280-BC81-576FB18AD362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99ABE02E-E8C9-4280-BC81-576FB18AD362}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

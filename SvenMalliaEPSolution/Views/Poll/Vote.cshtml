@@ -1,0 +1,16 @@
+﻿@model Domain.Models.Poll
+
+<h2>@Model.Title</h2>
+<h2>@Model.Id</h2>
+<form method="post" action="/Poll/Vote" class="container mt-4" enctype="multipart/form-data">
+	<div class="mb3">
+		<input type="number" value="@Model.Id" readonly name="Poll.Id" hidden/>
+		<select name="Poll.Option1VotesCount">
+			<option value="1">@Model.Option1Text</option>
+			<option value="2">@Model.Option2Text</option>
+			<option value="3">@Model.Option3Text</option>
+		</select>
+	</div>
+	<button type="submit" class="btn btn-primary">Vote</button>
+
+</form>

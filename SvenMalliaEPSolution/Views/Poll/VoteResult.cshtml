@@ -1,0 +1,26 @@
+﻿@model Domain.Models.Poll
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<h1>Vote Results</h1>
+<canvas id="myChart" style="width:100%;max-width:300px"></canvas>
+<script>
+    var xValues = ["@Model.Option1Text", "@Model.Option2Text", "@Model.Option3Text"];
+    var yValues = [@Model.Option1VotesCount, @Model.Option2VotesCount, @Model.Option3VotesCount];
+    var barColors = ["red", "green","blue"];
+
+    new Chart("myChart", {
+      type: "doughnut",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "@Model.Title"
+        }
+      }
+    });
+</script>

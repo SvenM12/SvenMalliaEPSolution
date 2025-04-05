@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Domain.Models.Poll>
+@{
+	ViewData["Title"] = "Index";
+}
+<div class="row">
+    @foreach (var poll in Model)
+    {
+        <div class="col-md-4 mb-4">
+                    <h5 class="card-title">@poll.Title</h5>
+                    <h5 class="card-title">Created at @poll.DateCreated</h5>
+                    <a href="/Poll/Vote?id=@poll.Id" class="btn btn-primary">Vote</a>
+                    <a href="/Poll/VoteResult?id=@poll.Id" class="btn btn-primary">View Results</a>
+        </div>
+    }
+    <a href="/Poll/Create" class="btn btn-primary">Create Poll</a>
+</div>
