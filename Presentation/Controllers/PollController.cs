@@ -41,14 +41,14 @@ namespace Presentation.Controllers
 
         [HttpPost]
         [ServiceFilter(typeof(VoteActionFilter))]
-        public IActionResult Vote([FromServices] PollRepository pollRepository, Poll poll)
+        public IActionResult Vote([FromServices] PollFileRepository pollRepository, Poll poll)
         {
             pollRepository.Vote(poll);
             return RedirectToAction("VoteResult", new { id = poll.Id});
         }
 
         [HttpGet]
-        public IActionResult VoteResult(int id, [FromServices] PollRepository pollRepository)
+        public IActionResult VoteResult(int id, [FromServices] PollFileRepository pollRepository)
         {
             var poll = pollRepository.GetPolls(id).First();
             if (poll == null)

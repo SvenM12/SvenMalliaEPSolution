@@ -87,5 +87,26 @@ namespace DataAccess.Repositories
                 }
             }
         }
+
+        public void Vote(Poll poll)
+        {
+            string fileContents = File.ReadAllText(fileName);
+            var data = JsonConvert.DeserializeObject<List<Poll>>(fileContents);
+            if (data != null)
+            {
+                var originalPoll = data.Find(x => x.Id == poll.Id);
+                if (originalPoll != null)
+                {
+                    if (poll.Option1VotesCount == 1)
+                        originalPoll.Option1VotesCount += 1;
+                    else if (poll.Option1VotesCount == 2)
+                        originalPoll.Option2VotesCount += 1;
+                    else if (poll.Option1VotesCount == 3)
+                        originalPoll.Option3VotesCount += 1;
+                    fileContents = JsonConvert.SerializeObject(data);
+                    File.WriteAllText(fileName, fileContents);
+                }
+            }
+        }
     }
 }
