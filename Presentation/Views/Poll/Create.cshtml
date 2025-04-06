@@ -3,21 +3,21 @@
 <form method="post" action="/Poll/Create" class="container mt-4">
 	<div class="mb-3">
 		<label for="title" class="form-label">Poll Title:</label>
-		<input type="text" name="Poll.Title" class="form-control"/>
+		<input type="text" name="Poll.Title" class="form-control" required />
 	</div>
 	<div class="mb-3">
 		<label for="title" class="form-label">Option 1 Text:</label>
-		<input type="text" name="Poll.Option1Text" class="form-control" />
+		<input type="text" name="Poll.Option1Text" class="form-control" required />
 	</div>
 
 	<div class="mb-3">
 		<label for="title" class="form-label">Option 2 Text:</label>
-		<input type="text" name="Poll.Option2Text" class="form-control" />
+		<input type="text" name="Poll.Option2Text" class="form-control" required />
 	</div>
 
 	<div class="mb-3">
 		<label for="title" class="form-label">Option 3 Text:</label>
-		<input type="text" name="Poll.Option3Text" class="form-control" />
+		<input type="text" name="Poll.Option3Text" class="form-control" required />
 	</div>
 	<button type="submit" class="btn btn-primary">Add Poll</button>
 </form>

@@ -26,7 +26,7 @@ namespace DataAccess.Repositories
 
         public void Vote(Poll poll)
         {
-            var originalPoll = GetPolls(poll.Id).First();
+            var originalPoll = GetPolls().First(x => x.Id == poll.Id);
             if (poll.Option1VotesCount == 1)
                 originalPoll.Option1VotesCount += 1;
             else if (poll.Option1VotesCount == 2)
@@ -38,33 +38,9 @@ namespace DataAccess.Repositories
             
         }
 
-        public IQueryable<Poll> GetPolls(int id = -1)
+        public IQueryable<Poll> GetPolls()
         {
-            if (id == -1)
-            {
-                return myContext.Polls.Select(x => new Poll
-                {
-                    Title = x.Title,
-                    Id = x.Id,
-                    DateCreated = x.DateCreated,
-                }).AsQueryable();
-            }
-            else
-            {
-                return myContext.Polls.Where(x => x.Id == id)
-                    .Select(x => new Poll
-                    {
-                        Title = x.Title,
-                        Id = x.Id,
-                        Option1Text = x.Option1Text,
-                        Option2Text = x.Option2Text,
-                        Option3Text = x.Option3Text,
-                        Option1VotesCount = x.Option1VotesCount,
-                        Option2VotesCount = x.Option2VotesCount,
-                        Option3VotesCount = x.Option3VotesCount,
-                        DateCreated = x.DateCreated
-                    }).AsQueryable();
-            }
+                return myContext.Polls.AsQueryable();
         }
     }
 }
